@@ -2,7 +2,7 @@
 
 ## James Carson - Team Leader, Quicken Loans
 
-_He went kind of quikly through these slides_
+_He went kind of quikly through these slides. I hope these are made available._
 
 ## Key Takeaways
 
