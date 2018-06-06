@@ -1,7 +1,7 @@
 
 ## Day 1
 
-Most of the sessions I attended on day 1 had something to do with operationalizing analytics or delivering business value with analytics.
+Most of the sessions I attended on day 1 had something to do with operationalizing analytics or delivering business value with analytics. All of the speakers related to this topic admitted how hard it is to make analytics _actionable_ and _acted on_. 
 
 Probably the most important idea that was repeated in a few different talks was about getting business users to talk openly about the problem they are trying to solve. Rather than trying to run with a problem described as "tell us some insights about X", analysts should engage with the stakeholder to understand what part of their decision-making process they're trying to improve. 
 

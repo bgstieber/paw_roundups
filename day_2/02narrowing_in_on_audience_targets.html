@@ -1055,43 +1055,31 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>02digging_into_fval_with_pred_analytics</title></head><body><article class="markdown-body"><h1 id="digging-into-future-value-with-predictive-analytics">Digging into Future Value with Predictive Analytics<a class="headerlink" href="#digging-into-future-value-with-predictive-analytics" title="Permanent link"></a></h1>
-<h2 id="morgan-vater-caterpillar">Morgan Vater - Caterpillar<a class="headerlink" href="#morgan-vater-caterpillar" title="Permanent link"></a></h2>
+</style><title>02narrowing_in_on_audience_targets</title></head><body><article class="markdown-body"><h1 id="narrowing-in-on-audience-targets-leveraging-cross-platform-affinity-for-marketing-optimization">Narrowing-in on Audience Targets; Leveraging Cross Platform Affinity for Marketing Optimization<a class="headerlink" href="#narrowing-in-on-audience-targets-leveraging-cross-platform-affinity-for-marketing-optimization" title="Permanent link"></a></h1>
+<h2 id="samantha-lipson-data-scientit-viacom">Samantha Lipson - Data Scientit - Viacom<a class="headerlink" href="#samantha-lipson-data-scientit-viacom" title="Permanent link"></a></h2>
+<p><em>Got to this session a little late, and speaker seemed rushed.</em></p>
 <h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link"></a></h2>
-<ol>
-<li>Build a strong foundation for analytics by developing and implementing <a href="https://iianalytics.com/analytics-resources/delta-model-five-stages-of-analytics-maturity-a-primer">DELTA model</a> within organization</li>
-<li>Balance focus on organizational and technical aspects of analytics</li>
-<li>Think big, start small, and act fast. Optimize results.</li>
-</ol>
+<ul>
+<li>Measured similarity between shows and websites to find websites where company could advertise for certain shows</li>
+<li>Also looked at similarity between shows to find out which viewers of show A were also watching show B </li>
+</ul>
 <h2 id="rough-outline-of-talk">Rough Outline of Talk<a class="headerlink" href="#rough-outline-of-talk" title="Permanent link"></a></h2>
-<p>Why are companies not consistently realizing value in analytics?</p>
+<p>Trying to improve a television network&rsquo;s promos and suggested shows</p>
+<p>Data: overlaps between shows and websites</p>
 <ul>
-<li>Analytics skills gap <em>across</em> industries</li>
-<li>Many companies not leveraging advanced analytics tools or predictive analytics techniques</li>
-<li>Cultural change needed for better utilization</li>
+<li>Had viewing + site behavior for users and calculated sum of overlap</li>
+<li>Need probability of co-occurrence</li>
+<li><a href="https://web.stanford.edu/~jurafsky/slp3/15.pdf">Positive Pointwise Mutual Information</a> - PPMI<ul>
+<li>Just need overlap matrix</li>
 </ul>
-<p>Cultural barriers to analytics utilization</p>
+</li>
+</ul>
+<p>pmi(x,y) = log{p(x,y) / (p(x) * p(y))} = log(p(x|y) / p(x)) = log(p(y|x) / p(y))</p>
+<p>Built an application which allowed users to look at overlaps between show and websites. Allowed for targeting audience for a certain show for different sites. </p>
+<p>Finding similar shows, used PPMI score to calculate cosine similarity between two shows. Interesting way to calculate similarity, why not use correlation between vectors?</p>
 <ul>
-<li>Complacency<ul>
-<li>Blockbuster, Kodak</li>
+<li>Pretty intuitive ideas for analytical project, how could we implement something like this in our business<ul>
+<li>looking at relationship for each X across some other element Y</li>
 </ul>
 </li>
-<li>Competing priorities<ul>
-<li>Analytics is an enabler to business strategy</li>
-</ul>
-</li>
-<li>Resistance to change<ul>
-<li>needs to be easy to use and adopt</li>
-<li>needs to have the so-what factor</li>
-</ul>
-</li>
-<li>Skepticism<ul>
-<li>need to build trust in analytical method</li>
-</ul>
-</li>
-</ul>
-<p>We&rsquo;re not just analytics professionals, we&rsquo;re stewards / evangelists of changing business-as-usual</p>
-<p>Analytics DELTA - Data, Enterprise, Leadership, Targets, Analysts</p>
-<p>They use agile in two-week sprints</p>
-<p>&ldquo;If you build the technical analytics too far ahead of the organization, your efforts will be wasted&rdquo;</p>
-<p>They&rsquo;ve driven analytics across the entire organization - which was no small feat. </p></article></body></html>
+</ul></article></body></html>

@@ -1055,43 +1055,53 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>02digging_into_fval_with_pred_analytics</title></head><body><article class="markdown-body"><h1 id="digging-into-future-value-with-predictive-analytics">Digging into Future Value with Predictive Analytics<a class="headerlink" href="#digging-into-future-value-with-predictive-analytics" title="Permanent link"></a></h1>
-<h2 id="morgan-vater-caterpillar">Morgan Vater - Caterpillar<a class="headerlink" href="#morgan-vater-caterpillar" title="Permanent link"></a></h2>
+</style><title>02predicting_readiness_to_purchase</title></head><body><article class="markdown-body"><h1 id="predicting-readiness-to-purchase">Predicting Readiness to Purchase<a class="headerlink" href="#predicting-readiness-to-purchase" title="Permanent link"></a></h1>
+<h2 id="andy-jacob-data-scientist-will-scheck-analytics-manager-caterpillar">Andy Jacob - Data Scientist, Will Scheck - Analytics Manager - Caterpillar<a class="headerlink" href="#andy-jacob-data-scientist-will-scheck-analytics-manager-caterpillar" title="Permanent link"></a></h2>
 <h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link"></a></h2>
-<ol>
-<li>Build a strong foundation for analytics by developing and implementing <a href="https://iianalytics.com/analytics-resources/delta-model-five-stages-of-analytics-maturity-a-primer">DELTA model</a> within organization</li>
-<li>Balance focus on organizational and technical aspects of analytics</li>
-<li>Think big, start small, and act fast. Optimize results.</li>
-</ol>
+<ul>
+<li>Data accuracy is vital</li>
+<li>Don&rsquo;t fall in love with one model</li>
+<li>It&rsquo;s a journey<ul>
+<li>It took them 6-9 months to have a production-ready model</li>
+</ul>
+</li>
+<li>Interesting approach to the acquistion / lapsed problem</li>
+</ul>
 <h2 id="rough-outline-of-talk">Rough Outline of Talk<a class="headerlink" href="#rough-outline-of-talk" title="Permanent link"></a></h2>
-<p>Why are companies not consistently realizing value in analytics?</p>
+<p>Project outline, they were trying to accomplish:</p>
 <ul>
-<li>Analytics skills gap <em>across</em> industries</li>
-<li>Many companies not leveraging advanced analytics tools or predictive analytics techniques</li>
-<li>Cultural change needed for better utilization</li>
+<li>Identify customers most likely to purchase</li>
+<li>prioritize leads</li>
+<li>sell more machines</li>
 </ul>
-<p>Cultural barriers to analytics utilization</p>
+<p>Analytics: build accurate model that can be re-ran when needed (what goes into whether a customer buys a machine?)</p>
+<p>Previously: salespeople would purchase customer lists from 3rd party vendors</p>
+<p>Customer records were dirty</p>
 <ul>
-<li>Complacency<ul>
-<li>Blockbuster, Kodak</li>
+<li>Had: customer transactions from 5 database stored around Caterpillar, machine current owner (their best guess)</li>
+<li>Needed: accurate representation of machine ownership, historical transaction information for customer, machine value over time</li>
 </ul>
-</li>
-<li>Competing priorities<ul>
-<li>Analytics is an enabler to business strategy</li>
-</ul>
-</li>
-<li>Resistance to change<ul>
-<li>needs to be easy to use and adopt</li>
-<li>needs to have the so-what factor</li>
-</ul>
-</li>
-<li>Skepticism<ul>
-<li>need to build trust in analytical method</li>
+<p>How should data be organized?</p>
+<ul>
+<li>Had historical transactional data, then looked at purchasing in next six months<ul>
+<li>We could build similar models such as:<ul>
+<li>likelihood of gift in next X, Y, Z months</li>
 </ul>
 </li>
 </ul>
-<p>We&rsquo;re not just analytics professionals, we&rsquo;re stewards / evangelists of changing business-as-usual</p>
-<p>Analytics DELTA - Data, Enterprise, Leadership, Targets, Analysts</p>
-<p>They use agile in two-week sprints</p>
-<p>&ldquo;If you build the technical analytics too far ahead of the organization, your efforts will be wasted&rdquo;</p>
-<p>They&rsquo;ve driven analytics across the entire organization - which was no small feat. </p></article></body></html>
+</li>
+<li>Built testing data sets based on how far back they looked historically<ul>
+<li>kept six months constant, but look at different time ranges for historical data</li>
+</ul>
+</li>
+<li>Rare event problem, used down-sampling for non-sale case<ul>
+<li>Layman&rsquo;s terms: dropped some non-events from modeling data sets</li>
+</ul>
+</li>
+</ul>
+<p>Used gradient boosted model</p>
+<ul>
+<li>2000 lines of code to get data ready for model</li>
+<li>1 line of code to specify the model</li>
+</ul>
+<p>Timeline of project: 6-9 months to go from cleaned up data to modeling to handing list to marketers</p></article></body></html>
