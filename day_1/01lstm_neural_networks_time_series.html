@@ -1055,77 +1055,38 @@ body .markdown-body
 .codehilite .vi{color:teal}
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
-</style><title>01balancing_evidence_and_intuition_aligning_HR_analytics</title></head><body><article class="markdown-body"><h1 id="balancing-evidence-and-intuition-aligning-hr-analytics-to-business-objective">Balancing Evidence and Intuition: Aligning HR Analytics to Business Objective<a class="headerlink" href="#balancing-evidence-and-intuition-aligning-hr-analytics-to-business-objective" title="Permanent link"></a></h1>
-<h2 id="erdmann-and-van-leeuwen-hr-analytics-shell">Erdmann and van Leeuwen - HR Analytics - Shell<a class="headerlink" href="#erdmann-and-van-leeuwen-hr-analytics-shell" title="Permanent link"></a></h2>
-<p><em>I went with the hope of understanding how we might be able to quantify DoD performance</em></p>
+</style><title>01lstm_neural_networks_time_series</title></head><body><article class="markdown-body"><h2 id="lstm-neural-networks-for-time-series-analysis">LSTM Neural Networks for Time Series Analysis<a class="headerlink" href="#lstm-neural-networks-for-time-series-analysis" title="Permanent link"></a></h2>
+<h2 id="james-mccaffrey-microsoft-research">James McCaffrey - Microsoft Research<a class="headerlink" href="#james-mccaffrey-microsoft-research" title="Permanent link"></a></h2>
 <h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link"></a></h2>
-<ul>
-<li>Found that team leadership ws an important driver of sales performance. Used these results to suggest team leadership programs. </li>
-<li>It&rsquo;s clear this team has spent a lot of time thinking about appropriate project structure</li>
-<li>Multi-level modeling is a good approach, these ideas are important for modeling sales performance<ul>
-<li>Controlling for heterogeneity <em>across</em> teams</li>
-</ul>
-</li>
-<li>Emphasized importance of cross-functional teams and heightened collaboration</li>
-</ul>
+<p>Not much right now</p>
 <h2 id="talk-outline">Talk Outline<a class="headerlink" href="#talk-outline" title="Permanent link"></a></h2>
 <ul>
-<li>How analytics is used for sales and marketing</li>
-<li>Shell has 80,000 employees</li>
-<li>Skilled people X high motivation X opportunity to contribute<ul>
-<li>recruitment / professional development</li>
-<li>what contributes to motivation?<ul>
-<li>which managers are better/worse motivators? why?</li>
+<li>What is a time series problem?</li>
+<li>Common standard approaches<ul>
+<li>AR, SimpleExponentialSmoothing, MA</li>
 </ul>
 </li>
+<li>Not-So-Common Approaches<ul>
+<li>Deep neural networks</li>
+<li>LSTM network</li>
 </ul>
 </li>
-</ul>
-<p>Transition from beliefs to evidence</p>
-<ul>
-<li>Many HR practices are based on experience, intuition, and beliefs</li>
-<li>Evidence and analytics does not replace, but <strong>supplements intuition</strong>, <strong>experience</strong>, and beliefs</li>
-</ul>
-<p>The job of analytics is not to &ldquo;do magic&rdquo;, but (along with business users) understand where problems are, <strong>what problems may be solveable</strong>, and what the impact of solving this problem will be</p>
-<p>Turning questions into actions</p>
-<ul>
-<li>Which questions? What data? Which rules? What insights? Which actions?</li>
-<li>Shell has a generic project approach </li>
-</ul>
-<p>Project Spark</p>
-<ul>
-<li>Combined HR data and sales data<ul>
-<li>about 1,500 sales managers</li>
+<li>Different techniques work differently well for different problems<ul>
+<li>length of time series, seasonality, stationarity, &hellip;</li>
+<li>there is not <em>only one way</em></li>
 </ul>
 </li>
-<li>How to optimize return on human capital?</li>
-<li>About an 8 month project</li>
-<li>Research - Conceptual Model - Data Identification - Data ACquisition - Survey Design - Survey - Recommendations - Report - Action</li>
-<li>They use hierarchical modeling<ul>
-<li>This is a very reductive summary&hellip;</li>
+<li>LSTM neural networks<ul>
+<li>have states<ul>
+<li>allows for contextual understanding (natural language processing)</li>
+<li>sequencing</li>
 </ul>
 </li>
-<li>They found (using results from employee surveys) that team leadership was a strong predictor of sales performance<ul>
-<li>This finding led to the actionable result of increased investment in leadership development programs</li>
+<li>recurrence: output depends on current input (t) and previous output (t-1)</li>
+<li>image for LSTM</li>
 </ul>
 </li>
-<li>Personality traits are strong drivers of sales performance</li>
-</ul>
-<p>Key takeaways from Shell&rsquo;s Project Spark</p>
-<ul>
-<li>Collaboration<ul>
-<li>collaborate closely with the business to generate <em>business value</em><ul>
-<li>cross-functional teams</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>Commitment<ul>
-<li>After leadership approval, it is important for leaders to commit to their own involvement and willingness to allocate resources</li>
-</ul>
-</li>
-<li>Change<ul>
-<li>Integrate change management in early stage</li>
-</ul>
-</li>
+<li>Sequence length is an important hyperparameter to tune</li>
+<li>Length of memory also important hyperparameter</li>
+<li>Tuning is (probably) different for anomaly detection vs. forecasting</li>
 </ul></article></body></html>
