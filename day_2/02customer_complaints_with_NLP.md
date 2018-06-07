@@ -1,6 +1,8 @@
-# Title
+# Revisiting Customer Complaints using Natural Language Processing 
 
-## Speaker - Affiliation
+## Vishal Morde - VP Data Science - Barclays
+
+_Really good session which showed how NLP analyses could be implemented in a business. Very appropriate as WFAA moves into this space a bit._
 
 ## Key Takeaways
 
