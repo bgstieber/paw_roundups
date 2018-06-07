@@ -42,3 +42,11 @@ __positioned__: still solicit feedback from senior leadership, but exists with a
 ## Day 2
 
 ## Workshop
+
+_An interesting thing happened to me while I was grabbing coffee on the way to the workshop._
+
+## Blogs to check out
+
+[data elixir](https://dataelixir.com/)
+
+[kdnuggets](https://www.kdnuggets.com/)

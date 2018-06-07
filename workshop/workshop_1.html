@@ -1071,6 +1071,7 @@ body .markdown-body
 <li>rely on one technique<ul>
 <li>to a little boy with a hammer, everything is a nail</li>
 <li>every technique has weaknesses</li>
+<li>Ensemble methods can help here</li>
 </ul>
 </li>
 <li>ask the wrong question<ul>
@@ -1080,6 +1081,10 @@ body .markdown-body
 </li>
 <li>listen (only) to the data<ul>
 <li>not trusting expert opinion</li>
+<li>Opportunities for learning when model disagrees with domain experts<ul>
+<li>Different types of wisdom</li>
+</ul>
+</li>
 </ul>
 </li>
 <li>accept information/data leaks from the future<ul>
@@ -1168,4 +1173,124 @@ body .markdown-body
 <li>implementation costs</li>
 </ul>
 <p><strong>Really important</strong>: SMART beta - used components from <em>current</em> securities. Information leak from the future. Using only <em>current</em> securities excludes companies that went bankrupt. <strong>Survivor bias.</strong> Data coverage today is (almost) always going to be better than what it was like yesterday.</p>
-<p>Always be cognizant of the look-ahead problem.</p></article></body></html>
+<p>Always be cognizant of the look-ahead problem.</p>
+<h2 id="lack-data">Lack Data<a class="headerlink" href="#lack-data" title="Permanent link"></a></h2>
+<p>Need labeled cases for best gains to classify or estimate; clustering is much less effective. Interesting known cases may be exceedingly rare.</p>
+<p>Success of a project can be dependent on availability of good training data.</p>
+<p>Example of a credit card company: didn&rsquo;t have data on risky credit applicants. Invested and estimated risk by giving risky applicants credit. Estimated risk using what was known at start. They made a <em>large investment</em> to get and create <em>relevant data</em>.</p>
+<h2 id="focus-on-training">Focus on Training<a class="headerlink" href="#focus-on-training" title="Permanent link"></a></h2>
+<ul>
+<li>Out-of-sample results matter<ul>
+<li>otherwise, just use a lookup table</li>
+</ul>
+</li>
+<li>Day vs. week training for neural networks<ul>
+<li>Memorized the training data</li>
+<li><a href="https://medium.com/mlreview/making-sense-of-the-bias-variance-trade-off-in-deep-reinforcement-learning-79cf1e83d565">bias vs. variance tradeoff</a></li>
+</ul>
+</li>
+<li>Resampling methods can defend against over-fitting<ul>
+<li>Training vs. validation sets<ul>
+<li>Set aside the validation set <strong>before</strong> any statistical analysis is done. <strong>Very important</strong> to blind yourself</li>
+</ul>
+</li>
+<li>V-fold cross validation<ul>
+<li>Really good way to evaluate how your models are doing</li>
+</ul>
+</li>
+<li>Bootstrapping</li>
+</ul>
+</li>
+<li>Inductive vs. deductive modeling<ul>
+<li>data science is inductive modeling, operating under the assumption of smoothness (trying to predict/generalize the whole from a set of examples)<ul>
+<li>two similar inputs should result in similar output</li>
+</ul>
+</li>
+<li>Likened it to trying to learn algebra using answers to odd-numbered questions and answers in a text book</li>
+</ul>
+</li>
+</ul>
+<h2 id="rely-on-one-technique">Rely on One Technique<a class="headerlink" href="#rely-on-one-technique" title="Permanent link"></a></h2>
+<ul>
+<li>for the best work, you need a whole toolkit</li>
+<li>always compare results to a conventional method<ul>
+<li>does this heavy ML method beat logistic regression?</li>
+<li>the different techniques have different purposes (regression is better than decision trees at some things and vice versa), which methods perform better give you insight to some of the &ldquo;hidden&rdquo; complexities in the data/problem</li>
+</ul>
+</li>
+<li>Unusual for modeling technique to make a big technique, more important to think about feature creation, complexity control, etc.</li>
+<li>use a handful of good tools and multiple methods and compare amongst them</li>
+<li>Consensus vs. contributory methods<ul>
+<li>consensus: don&rsquo;t need data after fitting model (e.g. regression)</li>
+<li>contributory: need data after fitting model (e.g. kNN)</li>
+</ul>
+</li>
+</ul>
+<p>&ldquo;The stupid models can&rsquo;t be fooled.&rdquo;</p>
+<p>Ensemble methods are a great way to get around the problem of relying on just one technique. Fit multiple ML models and pool them together.</p>
+<ul>
+<li>this is how the job title classification algorithm works</li>
+</ul>
+<h2 id="ensemble-methods">Ensemble Methods<a class="headerlink" href="#ensemble-methods" title="Permanent link"></a></h2>
+<p>&ldquo;And in a multitude of counselors there is safety.&rdquo;</p>
+<ul>
+<li>Combining models: bundling, bagging, boosting</li>
+<li>Generalization: diverge &amp; merge<ul>
+<li>group of models is the board of directors, rather than just one president</li>
+</ul>
+</li>
+<li>Bagging - bootstrap aggregating<ul>
+<li>create K boostrap replicates of dataset, fit model to each of the replicates, average the predictions of the K models</li>
+</ul>
+</li>
+<li>Boosting - get better at predicting the hard cases<ul>
+<li>add weight for poorly predicted observations, downweight well-predicted observations</li>
+<li>keep each classifier (resulting in a sequence of classifiers), and give most of the weight to the earlier classifiers</li>
+<li>taking for granted the things you get right, and pay more attention to what you&rsquo;re getting wrong</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<h2 id="ask-the-wrong-question">Ask the Wrong Question<a class="headerlink" href="#ask-the-wrong-question" title="Permanent link"></a></h2>
+<ul>
+<li>Project goal: need to aim at the right target</li>
+<li>Model goal: get the computer to &ldquo;feel&rdquo; like you do<ul>
+<li>ask the computer to do what&rsquo;s most helpful to you, not what&rsquo;s easiest for the computer</li>
+</ul>
+</li>
+</ul>
+<p>Example: fraud detection for international phone calls</p>
+<p>Typical project would probably be a classification model. Instead, they looked at normal behavior for each account and flagged outliers. Basically anomaly detection. </p>
+<p>What project should you choose (look at cost vs. ROI)</p>
+<ul>
+<li>time required, disruption effect, data availability and quality </li>
+</ul>
+<p>What criteria should you optimize?</p>
+<ul>
+<li>Squared error is convenient, but might not be for client</li>
+<li>Lift charts are great, but don&rsquo;t optimize AUC</li>
+<li>May need a custom metric</li>
+<li>May require a global search algorithm<ul>
+<li>lots of ways to optimize a function<ul>
+<li>linear programming, grid search, gradient descent, simulated annealing, nelder-mead</li>
+</ul>
+</li>
+<li>global r^d optimization when probes are expensive (GROPE)<ul>
+<li>class of problems where goal is to get to the answer with fewest probes (function evaluations)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>Most model fitting relies on the same objective function (minimizing squared error). Does minimizing this metric have merit for the problem you&rsquo;re trying to solve?</p>
+<ul>
+<li>stock market example: predicted move from $10 to $11, actually got $14<ul>
+<li>Model feels worse about this error than if it had actually gotten $9.</li>
+</ul>
+</li>
+</ul>
+<p>AUC is looking across the entire predictive set. Isn&rsquo;t there a better cutoff point to look at? What part of the lift curve are you interested in?</p>
+<p>Classification, generally treats false dismissal and false positive as equally bad, this is almost always not true
+  - Cost of erroneous fire alarm vs. missing a fire
+  - Cost of misdiagnosing vs. not diagnosing</p>
+<p>Lifts and Gain charts are useful</p></article></body></html>

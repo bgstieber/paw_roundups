@@ -12,11 +12,14 @@ Deadly dozen mistakes
   3. rely on one technique
      - to a little boy with a hammer, everything is a nail
      - every technique has weaknesses
+     - Ensemble methods can help here
   4. ask the wrong question
      - asking the easy question instead of the one that gets close to the answer
      - vague real-world question vs. crisp technical question
   5. listen (only) to the data
      - not trusting expert opinion
+     - Opportunities for learning when model disagrees with domain experts
+         + Different types of wisdom
   6. accept information/data leaks from the future
      - allowing "future" data to be involved in the modeling process
      - was that data actually available for the time period you're interested in predicting/modeling?
@@ -79,4 +82,102 @@ Implementation testing
 __Really important__: SMART beta - used components from _current_ securities. Information leak from the future. Using only _current_ securities excludes companies that went bankrupt. __Survivor bias.__ Data coverage today is (almost) always going to be better than what it was like yesterday.
 
 Always be cognizant of the look-ahead problem.
+
+
+## Lack Data
+
+Need labeled cases for best gains to classify or estimate; clustering is much less effective. Interesting known cases may be exceedingly rare.
+
+Success of a project can be dependent on availability of good training data.
+
+Example of a credit card company: didn't have data on risky credit applicants. Invested and estimated risk by giving risky applicants credit. Estimated risk using what was known at start. They made a _large investment_ to get and create _relevant data_.
+
+## Focus on Training
+
+  - Out-of-sample results matter
+      + otherwise, just use a lookup table
+  - Day vs. week training for neural networks
+      + Memorized the training data
+      + [bias vs. variance tradeoff](https://medium.com/mlreview/making-sense-of-the-bias-variance-trade-off-in-deep-reinforcement-learning-79cf1e83d565)
+  - Resampling methods can defend against over-fitting
+      + Training vs. validation sets
+          * Set aside the validation set __before__ any statistical analysis is done. __Very important__ to blind yourself
+      + V-fold cross validation
+          * Really good way to evaluate how your models are doing
+      + Bootstrapping
+  - Inductive vs. deductive modeling
+      + data science is inductive modeling, operating under the assumption of smoothness (trying to predict/generalize the whole from a set of examples)
+          * two similar inputs should result in similar output
+      + Likened it to trying to learn algebra using answers to odd-numbered questions and answers in a text book
+
+## Rely on One Technique
+
+  - for the best work, you need a whole toolkit
+  - always compare results to a conventional method
+      + does this heavy ML method beat logistic regression?
+      + the different techniques have different purposes (regression is better than decision trees at some things and vice versa), which methods perform better give you insight to some of the "hidden" complexities in the data/problem
+  - Unusual for modeling technique to make a big technique, more important to think about feature creation, complexity control, etc.
+  - use a handful of good tools and multiple methods and compare amongst them
+  - Consensus vs. contributory methods
+      + consensus: don't need data after fitting model (e.g. regression)
+      + contributory: need data after fitting model (e.g. kNN)
+
+"The stupid models can't be fooled."
+
+Ensemble methods are a great way to get around the problem of relying on just one technique. Fit multiple ML models and pool them together.
+
+  - this is how the job title classification algorithm works
+
+## Ensemble Methods
+
+"And in a multitude of counselors there is safety."
+
+  - Combining models: bundling, bagging, boosting
+  - Generalization: diverge & merge
+      + group of models is the board of directors, rather than just one president
+  - Bagging - bootstrap aggregating
+      + create K boostrap replicates of dataset, fit model to each of the replicates, average the predictions of the K models
+  - Boosting - get better at predicting the hard cases
+      + add weight for poorly predicted observations, downweight well-predicted observations
+      + keep each classifier (resulting in a sequence of classifiers), and give most of the weight to the earlier classifiers
+      + taking for granted the things you get right, and pay more attention to what you're getting wrong
+  - 
+
+## Ask the Wrong Question
+
+  - Project goal: need to aim at the right target
+  - Model goal: get the computer to "feel" like you do
+      + ask the computer to do what's most helpful to you, not what's easiest for the computer
+
+Example: fraud detection for international phone calls
+
+Typical project would probably be a classification model. Instead, they looked at normal behavior for each account and flagged outliers. Basically anomaly detection. 
+
+What project should you choose (look at cost vs. ROI)
+
+  - time required, disruption effect, data availability and quality 
+
+What criteria should you optimize?
+
+  - Squared error is convenient, but might not be for client
+  - Lift charts are great, but don't optimize AUC
+  - May need a custom metric
+  - May require a global search algorithm
+      + lots of ways to optimize a function
+          * linear programming, grid search, gradient descent, simulated annealing, nelder-mead
+      + global r^d optimization when probes are expensive (GROPE)
+          * class of problems where goal is to get to the answer with fewest probes (function evaluations)
+
+Most model fitting relies on the same objective function (minimizing squared error). Does minimizing this metric have merit for the problem you're trying to solve?
+
+  - stock market example: predicted move from $10 to $11, actually got $14
+      + Model feels worse about this error than if it had actually gotten $9.
+
+AUC is looking across the entire predictive set. Isn't there a better cutoff point to look at? What part of the lift curve are you interested in?
+
+Classification, generally treats false dismissal and false positive as equally bad, this is almost always not true
+  - Cost of erroneous fire alarm vs. missing a fire
+  - Cost of misdiagnosing vs. not diagnosing
+
+Lifts and Gain charts are useful
 
