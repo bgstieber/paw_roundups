@@ -1,5 +1,7 @@
 # The Deadly Dozen: The Top 12 Analytics Mistakes and the Techniques to Defeat Them
 
+_Slides are available for this workshop. Slides cover most of the detail._
+
 ## John Elder - Founder & Chair - Elder Research
 
 Deadly dozen mistakes
@@ -181,3 +183,64 @@ Classification, generally treats false dismissal and false positive as equally b
 
 Lifts and Gain charts are useful
 
+## Mistake to Listen Only to the Data
+
+  - are the comparisons we're making fair?
+      + comparing SAT scores for states that have schools that accept ACT instead (e.g. midwestern states have self-selection issues, top students want to get out of midwestern states, so need to take SAT to go to coastal schools)
+      + comparing whole populations of some states versus of selection of populations for other states
+  - If given the chance, the computer will cheat and find the easiest solution
+  - Try to incoporate outside information and scrutinize the data you have
+
+## Mistake to Accept Leaks from the Future
+
+  - This is why the historical data warehouse is an important and will continue to be an important
+
+## Mistake to Discount Pesky Cases
+
+  - Best phrase in research isn't "Aha!" but "That's odd"
+      + And then follow up on these oddities!
+  - Inconsistencies in data may uncover problems with the data supply infrastructure and/or reveal a larger business problem
+
+## Mistake to Extrapolate (and always trust those extrapolations!)
+
+  - cat being afraid of dress shoes
+      + tendency to learn and trust from our first few experiences
+  - Curse of Dimensionality
+  - Evolutionary Paradigm
+      + Don't fall in love with your models
+      + Mistake to try too hard to get a model to "like" your feature
+
+## Mistake to Answer Every Inquiry
+
+"Don't know" is a useful model output state
+
+Uncertainty is an important thing to report along with predicted values
+
+[CADE](https://epubs.siam.org/doi/pdf/10.1137/1.9781611973440.67) for outlier detection
+
+## Mistake to Cherry-Pick Results
+
+  - You got an unlikely response, should it be trusted or what is it actually just by random chance?
+
+## Target Shuffling
+
+_I think a deeper analysis and literature review of this method is warranted. How does this compare to bootstrapping?_
+
+  - Seems (to me) like a large-scale rank-sum test
+  - See the [whitepaper](https://www.elderresearch.com/target-shuffling?hsCtaTracking=287a28ff-837e-45ee-9270-d674f9395d8e%7C0d65515f-b012-49dd-8bf9-af2a82e178b3)
+  - Allows you to say what % chance the results you've _found_ are real
+
+## Mistake to Believe the Best Model
+
+  - Interpretability not always necessary
+      + Model can be useful without being "correct" or explanatory
+      + Humans try to make sense out of anything (how can both a positive _and_ negative correlation on same XY make sense?)
+
+# How to Succeed
+
+PATH:
+
+  - Persistence - attack repeatedly and from different angles
+  - Attitude - stay positive
+  - Teamwork - must have cooperation and collaboration
+  - Humility - learning from others require vulnerability and being okay with saying "I don't know"

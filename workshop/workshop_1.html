@@ -1056,6 +1056,7 @@ body .markdown-body
 .codehilite .il{color:#009999}
 .codehilite .gc{color:#999;background-color:#EAF2F5}
 </style><title>workshop_1</title></head><body><article class="markdown-body"><h1 id="the-deadly-dozen-the-top-12-analytics-mistakes-and-the-techniques-to-defeat-them">The Deadly Dozen: The Top 12 Analytics Mistakes and the Techniques to Defeat Them<a class="headerlink" href="#the-deadly-dozen-the-top-12-analytics-mistakes-and-the-techniques-to-defeat-them" title="Permanent link"></a></h1>
+<p><em>Slides are available for this workshop. Slides cover most of the detail.</em></p>
 <h2 id="john-elder-founder-chair-elder-research">John Elder - Founder &amp; Chair - Elder Research<a class="headerlink" href="#john-elder-founder-chair-elder-research" title="Permanent link"></a></h2>
 <p>Deadly dozen mistakes</p>
 <ol>
@@ -1293,4 +1294,70 @@ body .markdown-body
 <p>Classification, generally treats false dismissal and false positive as equally bad, this is almost always not true
   - Cost of erroneous fire alarm vs. missing a fire
   - Cost of misdiagnosing vs. not diagnosing</p>
-<p>Lifts and Gain charts are useful</p></article></body></html>
+<p>Lifts and Gain charts are useful</p>
+<h2 id="mistake-to-listen-only-to-the-data">Mistake to Listen Only to the Data<a class="headerlink" href="#mistake-to-listen-only-to-the-data" title="Permanent link"></a></h2>
+<ul>
+<li>are the comparisons we&rsquo;re making fair?<ul>
+<li>comparing SAT scores for states that have schools that accept ACT instead (e.g. midwestern states have self-selection issues, top students want to get out of midwestern states, so need to take SAT to go to coastal schools)</li>
+<li>comparing whole populations of some states versus of selection of populations for other states</li>
+</ul>
+</li>
+<li>If given the chance, the computer will cheat and find the easiest solution</li>
+<li>Try to incoporate outside information and scrutinize the data you have</li>
+</ul>
+<h2 id="mistake-to-accept-leaks-from-the-future">Mistake to Accept Leaks from the Future<a class="headerlink" href="#mistake-to-accept-leaks-from-the-future" title="Permanent link"></a></h2>
+<ul>
+<li>This is why the historical data warehouse is an important and will continue to be an important</li>
+</ul>
+<h2 id="mistake-to-discount-pesky-cases">Mistake to Discount Pesky Cases<a class="headerlink" href="#mistake-to-discount-pesky-cases" title="Permanent link"></a></h2>
+<ul>
+<li>Best phrase in research isn&rsquo;t &ldquo;Aha!&rdquo; but &ldquo;That&rsquo;s odd&rdquo;<ul>
+<li>And then follow up on these oddities!</li>
+</ul>
+</li>
+<li>Inconsistencies in data may uncover problems with the data supply infrastructure and/or reveal a larger business problem</li>
+</ul>
+<h2 id="mistake-to-extrapolate-and-always-trust-those-extrapolations">Mistake to Extrapolate (and always trust those extrapolations!)<a class="headerlink" href="#mistake-to-extrapolate-and-always-trust-those-extrapolations" title="Permanent link"></a></h2>
+<ul>
+<li>cat being afraid of dress shoes<ul>
+<li>tendency to learn and trust from our first few experiences</li>
+</ul>
+</li>
+<li>Curse of Dimensionality</li>
+<li>Evolutionary Paradigm<ul>
+<li>Don&rsquo;t fall in love with your models</li>
+<li>Mistake to try too hard to get a model to &ldquo;like&rdquo; your feature</li>
+</ul>
+</li>
+</ul>
+<h2 id="mistake-to-answer-every-inquiry">Mistake to Answer Every Inquiry<a class="headerlink" href="#mistake-to-answer-every-inquiry" title="Permanent link"></a></h2>
+<p>&ldquo;Don&rsquo;t know&rdquo; is a useful model output state</p>
+<p>Uncertainty is an important thing to report along with predicted values</p>
+<p><a href="https://epubs.siam.org/doi/pdf/10.1137/1.9781611973440.67">CADE</a> for outlier detection</p>
+<h2 id="mistake-to-cherry-pick-results">Mistake to Cherry-Pick Results<a class="headerlink" href="#mistake-to-cherry-pick-results" title="Permanent link"></a></h2>
+<ul>
+<li>You got an unlikely response, should it be trusted or what is it actually just by random chance?</li>
+</ul>
+<h2 id="target-shuffling">Target Shuffling<a class="headerlink" href="#target-shuffling" title="Permanent link"></a></h2>
+<p><em>I think a deeper analysis and literature review of this method is warranted. How does this compare to bootstrapping?</em></p>
+<ul>
+<li>Seems (to me) like a large-scale rank-sum test</li>
+<li>See the <a href="https://www.elderresearch.com/target-shuffling?hsCtaTracking=287a28ff-837e-45ee-9270-d674f9395d8e%7C0d65515f-b012-49dd-8bf9-af2a82e178b3">whitepaper</a></li>
+<li>Allows you to say what % chance the results you&rsquo;ve <em>found</em> are real</li>
+</ul>
+<h2 id="mistake-to-believe-the-best-model">Mistake to Believe the Best Model<a class="headerlink" href="#mistake-to-believe-the-best-model" title="Permanent link"></a></h2>
+<ul>
+<li>Interpretability not always necessary<ul>
+<li>Model can be useful without being &ldquo;correct&rdquo; or explanatory</li>
+<li>Humans try to make sense out of anything (how can both a positive <em>and</em> negative correlation on same XY make sense?)</li>
+</ul>
+</li>
+</ul>
+<h1 id="how-to-succeed">How to Succeed<a class="headerlink" href="#how-to-succeed" title="Permanent link"></a></h1>
+<p>PATH:</p>
+<ul>
+<li>Persistence - attack repeatedly and from different angles</li>
+<li>Attitude - stay positive</li>
+<li>Teamwork - must have cooperation and collaboration</li>
+<li>Humility - learning from others require vulnerability and being okay with saying &ldquo;I don&rsquo;t know&rdquo;</li>
+</ul></article></body></html>

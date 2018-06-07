@@ -41,6 +41,17 @@ __positioned__: still solicit feedback from senior leadership, but exists with a
 
 ## Day 2
 
+A few more applied sessions during the second day.
+
+Interesting talks
+
+  - Caterpillar's predicting readiness to purchase
+  - NLP at Barclay's
+
+Panel discussion on operationalizing machine learning
+
+(__Summary Goes Here__)
+
 ## Workshop
 
 _An interesting thing happened to me while I was grabbing coffee on the way to the workshop._
