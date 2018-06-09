@@ -1,6 +1,6 @@
 # The Deadly Dozen: The Top 12 Analytics Mistakes and the Techniques to Defeat Them
 
-_Slides are available for this workshop. Slides cover most of the detail._
+_Slides are available for this workshop. Slides cover most of the detail discussed in the workshop. These notes are not an exhaustive summary of the workshop._
 
 ## John Elder - Founder & Chair - Elder Research
 
